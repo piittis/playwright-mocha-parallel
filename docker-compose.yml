@@ -1,0 +1,13 @@
+version: '3'
+services:
+  outsideworld:
+    build:
+      context: .
+      dockerfile: dockerfile
+    command: npm run outsideWorld
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 8020:8020
+
+  # Add other services. Apis, databases, etc.
