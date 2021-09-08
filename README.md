@@ -1,6 +1,8 @@
 # playwright-mocha-parallel
 Minimal example of parallel browser tests with `Playwright` and `Mocha`. Many users use your app at the same time, so why not make use of your beefy dev machine and run tests parallel as well, and save significant time.
 
+Note: Playwright now has its own test runner, that makes parallelism quite simple. If one prefers to use mocha, this example might be of interest.
+
 - `globalHooks`: Runs before mocha boots up. Starts up the browses.
 - `rootHooks`: Connects each mocha worker process to the browser.
 - `outsideWorld`: Some helpers to mock the outside world for your app. Can intercept outgoing data and send fake incoming data to your app.
